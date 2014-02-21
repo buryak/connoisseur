@@ -1,4 +1,5 @@
 Connoisseur::Application.routes.draw do
+  resources :stores
   resources :products
   root "products#index"
   # The priority is based upon order of creation: first created -> highest priority.

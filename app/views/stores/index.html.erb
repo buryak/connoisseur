@@ -1,0 +1,18 @@
+<div class="row">
+<div class="small-12 columns">
+<div class="text-center"><h1>Stores</h1>
+<h3><%= link_to "Back to Products", products_path %></h3></div><br>
+		
+<ul class="small-block-grid-2 large-block-grid-4 text-center">
+			<% @stores.each do |store| %>
+	  			<li><img src="http://www.auroraimporting.com/wp-content/uploads/LCBO-logo-7E6B6267B2-seeklogo_com.gif"><br>
+    			<%= link_to store['name'], store_path(store['id']) %><br>
+    			<%= store['address_line_1'] %><br>
+    			<%= store['address_line_2'] %><br>		
+    			<%= store['address_line_2'] %><br>
+    			<%= store['address_line_2'] %><br>
+    			</li>
+    		<% end %>
+    	</ul>
+    </div>
+</div>

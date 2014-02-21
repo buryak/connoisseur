@@ -1,11 +1,12 @@
 <div class="row">
 	<div class="small-12 columns">
-	<div class="text-center"><h1>Booze</h1></div><br>
+	<div class="text-center"><h1>Booze</h1>
+    <h3><%= link_to "Stores", stores_path %></h3></div><br>
 		<ul class="small-block-grid-2 large-block-grid-4 text-center">
 			<% @products['result'].each do |product| %>
 	  			<li><img src="<%= product['image_thumb_url'] %>"><br>
     			<%= link_to product['name'], product_path(product['id']) %><br>
-    			$<%= format_price product['price_in_cents'] %><br>
+    			<%= format_price product['price_in_cents'] %><br>
     			<%= product['primary_category'] %>
     			</li>
     		<% end %>
